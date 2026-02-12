@@ -5,7 +5,8 @@ updates:
     schedule:
       interval: "weekly"
     exclude-paths:
-      - "Cargo.toml.release"
+      - "/Cargo.toml.backup"
+      - "/Cargo.release.toml"
 
   - package-ecosystem: "npm"
     directory: "/crates/tailwind-rs-wasm"
