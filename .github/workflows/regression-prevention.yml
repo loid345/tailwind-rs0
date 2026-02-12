@@ -23,13 +23,19 @@ jobs:
       with:
         node-version: '18'
 
+    - name: Install pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        version: 8
+
     - name: Update Cargo dependencies
       run: cargo update
 
-    - name: Update npm dependencies (WASM crate)
+    - name: Update npm dependencies (WASM crate with pnpm lockfile)
       run: |
         cd crates/tailwind-rs-wasm
-        npm update
+        pnpm update @playwright/test
+        pnpm update
 
     - name: Update npm dependencies (Leptos demo)
       run: |
