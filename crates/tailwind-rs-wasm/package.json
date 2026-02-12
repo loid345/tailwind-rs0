@@ -22,12 +22,19 @@
     "serve": "python3 -m http.server 8080",
     "dev": "concurrently \"pnpm run serve\" \"pnpm run test:watch\""
   },
-  "keywords": ["tailwind", "css", "rust", "wasm", "playwright", "testing"],
+  "keywords": [
+    "tailwind",
+    "css",
+    "rust",
+    "wasm",
+    "playwright",
+    "testing"
+  ],
   "author": "Tailwind-RS Team",
   "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.55.0",
+    "@playwright/test": "^1.56.1",
     "concurrently": "^8.2.2"
   }
 }
