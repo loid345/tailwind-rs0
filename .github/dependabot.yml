@@ -1,0 +1,18 @@
+version: 2
+updates:
+  - package-ecosystem: "cargo"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    exclude-paths:
+      - "Cargo.toml.release"
+
+  - package-ecosystem: "npm"
+    directory: "/crates/tailwind-rs-wasm"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/demos/leptos-demo"
+    schedule:
+      interval: "weekly"
